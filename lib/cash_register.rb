@@ -36,7 +36,7 @@ class CashRegister
    def void_last_transaction
      if self.prices.length > 0
        self.total = self.total - self.prices.last.to_f
-       elsif
+     elsif self.prices.length == 0
          self.total = 0.0
        end
    end

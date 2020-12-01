@@ -16,7 +16,6 @@ class CashRegister
       self.total += stuff
       item_arr = ("#{title}," * quantity).split(",")
       @items << item_arr
-      @items.flatten!
     else
       self.total += price
       @items << title

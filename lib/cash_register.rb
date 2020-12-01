@@ -34,8 +34,8 @@ class CashRegister
    end
 
    def void_last_transaction
+      self.items.split('')
        self.total = self.total - self.prices.last.to_f
-       self.items -= (self.items[self.items.length - 1])
        if self.items.length == 0
          self.total = 0.0
        end

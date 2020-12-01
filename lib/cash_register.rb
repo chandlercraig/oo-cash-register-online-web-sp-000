@@ -34,7 +34,7 @@ class CashRegister
    end
 
    def void_last_transaction
-      self.items.split('')
+      self.items.split(/\s|\,/)
        self.total = self.total - self.prices.last.to_f
        if self.items.length == 0
          self.total = 0.0
